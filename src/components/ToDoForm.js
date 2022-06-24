@@ -7,23 +7,22 @@ const ToDoForm = () => {
     if (t === '') {
       alert('The Todo is empty');
     }
+    setTodo('');
     console.log(t);
     setTodo('');
   };
   return (
     <div>
-      <Form>
-        {/* <Form.Group className="mb-3"> */}
-        <input
-          type="text"
-          placeholder="Enter Todo"
-          onChange={(e) => setTodo(e.target.value)}
-        />
-        {/* </Form.Group> */}
-        <Button variant="primary" type="submit" onClick={() => addTodo(todo)}>
-          Submit
-        </Button>
-      </Form>
+      {/* <Form> */}
+      <input
+        type="text"
+        placeholder="Enter Todo"
+        onChange={(e) => setTodo(e.target.value)}
+      />
+      <Button variant="primary" type="submit" onClick={() => addTodo(todo)}>
+        Submit
+      </Button>
+      {/* </Form> */}
     </div>
   );
 };

@@ -1,13 +1,18 @@
 import React from 'react';
 // import './App.css';
-import Header from './components/Header';
-import ToDoForm from './components/ToDoForm';
+import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <ToDoForm />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<HomeScreen />} />
+          {/* <Route path="todolist" element={<TodoList />} /> */}
+        </Routes>
+      </Router>
     </div>
   );
 };
